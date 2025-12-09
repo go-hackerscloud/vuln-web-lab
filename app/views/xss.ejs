@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>XSS Lab</title></head>
+<body>
+  <h1>XSS Lab (stored)</h1>
+
+  <form method="post" action="/xss/comment">
+    <label>Name: <input name="author"></label><br/>
+    <label>Comment: <textarea name="comment"></textarea></label><br/>
+    <button>Post</button>
+  </form>
+
+  <h2>Comments</h2>
+  <ul>
+    <% comments.forEach(c => { %>
+      <li><strong><%= c.author %></strong>: <%- c.comment %></li>
+    <% }) %>
+  </ul>
+
+  <p><em>Note:</em> This view intentionally renders raw HTML to demonstrate XSS (`<%- ... %>`).</p>
+</body>
+</html>
