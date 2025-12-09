@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Upload Lab</title></head>
+<body>
+  <h1>Upload Lab</h1>
+  <form method="post" action="/upload" enctype="multipart/form-data">
+    <input type="file" name="file"><br/>
+    <button>Upload</button>
+  </form>
+  <p>Uploaded files land in `app/uploads/` with the original filename (intentionally unsafe).</p>
+</body>
+</html>
