@@ -17,3 +17,7 @@
    ```bash
    git clone https://github.com/GoHackersCloud/vuln-web-lab.git
    cd vuln-web-lab
+
+# Start 
+
+docker-compose -f docker/docker-compose.yml up --build
