@@ -1,1 +1,12 @@
-docker-compose up --build
+version: '3.8'
+services:
+  vuln-web-lab:
+    build: .
+    ports:
+      - "4000:3000"
+    volumes:
+      - ./app/db:/usr/src/app/db
+      - ./app/uploads:/usr/src/app/uploads
+    environment:
+      - NODE_ENV=development
+    restart: unless-stopped
