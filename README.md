@@ -21,3 +21,26 @@
 # Start 
 
 docker-compose -f docker/docker-compose.yml up --build
+
+_Visit: http://localhost:4000_
+
+
+# Quick start — local (Node.js)
+
+1. Install Node 18+ and npm.
+2. Copy .env.example → .env.
+3. Install & run:
+
+   cd app
+npm install
+npm run seed
+npm start
+
+_Visit: http://localhost:3000_
+
+# Default credentials
+admin / Password123!
+guest / guest
+
+
+
