@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head><title>SQLi Lab</title></head>
+<body>
+  <h1>Search posts</h1>
+  <form method="post" action="/sqli/search">
+    <input name="q" placeholder="search title">
+    <button>Search</button>
+  </form>
+  <% if (results) { %>
+    <ul>
+      <% results.forEach(r => { %>
+        <li><strong><%= r.title %></strong> — <%= r.content %></li>
+      <% }) %>
+    </ul>
+  <% } %>
+</body>
+</html>
